@@ -1,7 +1,7 @@
 used_cars
 
 id - SMALLINT - PRIMARY_KEY(NOTNULL - AUTO_INCREMENT - UNIQUE - INDEX)
-brand - VARCHAR(50) - NOTNULL
+brand - VARCHAR(50) - NOTNULL - INDEX
 model - VARCHAR(50) - NOTNULL - INDEX
 color - VARCHAR(20) - NULL
 displacement_cm3 - SMALLINT - NULL
@@ -11,5 +11,6 @@ fuel - VARCHAR(50) - NULL
 seat - SMALLINT - NULL
 weight_kg - SMALLINT - NULL
 tire_size - VARCHAR(100) - NULL
-chassis_number - SMALLINT - NOTNULL
-km - SMALLINT - NOTNULL 
+chassis_number - VARCHAR(50) - NOTNULL - UNIQUE - INDEX
+km - MEDIUMINT - NOTNULL 
+is_available - TINYINT - NULL - DEFAULT(0)
